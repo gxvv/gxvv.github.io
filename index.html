@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <title>前端开发工程师-高鑫-简历</title>
+</head>
+<style>
+    .top-class .gist {
+        width: 980px;
+        margin: 0 auto;
+    }
+    .top-class .gist .Box-body {
+        padding: 40px;
+    }
+    .top-class .gist a:link, a:visited {
+        color: rgb(3, 102, 214);
+        text-decoration: none;
+    }
+    .top-class .gist .markdown-body table {
+        border-collapse: collapse;
+    }
+    .top-class .gist .markdown-body .anchor {
+        display: inline;
+    }
+    .top-class .gist .markdown-body .anchor svg {
+        display: none;
+    }
+    .top-class .gist .markdown-body blockquote:nth-child(2) {
+        margin-left: 0;
+    }
+    @media print {
+        .top-class .gist {
+            width: auto;
+            margin: auto;
+        }
+        .top-class .gist .Box-body {
+            padding: 0;
+        }
+        .top-class .gist .gist-file {
+            border: none;
+        }
+
+        .top-class .gist .markdown-body table:first-child,
+        .top-class .gist .markdown-body blockquote:nth-child(2),
+        .top-class .gist .markdown-body p:nth-child(46)
+        {
+            display: none;
+        }
+        .top-class .gist .gist-data {
+            border-bottom: none;
+        }
+        .top-class .gist .markdown-body h2:nth-child(7) {
+            page-break-before: always;
+        }
+    }
+</style>
+
+<body class="top-class">
+    <script src="https://gist.github.com/gxvv/e5da4164f80d848b17228e2283daa51d.js"></script>
+    <script>
+        // fix: link anchor id
+        const anchors = document.querySelectorAll('.top-class .gist .markdown-body table a[href^="#"]');
+
+        anchors.forEach(anchor => {
+            const href = anchor.getAttribute('href');
+            const targetName = decodeURI(href.slice(1));
+
+            anchor.setAttribute('href', `#user-content-${targetName}`);
+        });
+    </script>
+</body>
+
+</html>
